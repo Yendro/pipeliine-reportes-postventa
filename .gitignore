@@ -1,1 +1,17 @@
-requerimientos.md
+# Credenciales y variables de entorno
+.env
+
+# Logs
+*.log
+prompts.md
+
+# Archivos generados
+reports/
+reports/*.xlsx
+
+# Entorno virtual
+.vscode/
+.venv/
+.env/
+*.pyc
+*__pycache__/
