@@ -1,2 +1,0 @@
-
-SELECT * FROM `terraviva-439415.Reporte_condominio.Condo_cartera_vencida`
