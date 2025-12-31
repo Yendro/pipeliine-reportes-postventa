@@ -76,7 +76,7 @@ LOG_CONFIG = {
     'level': os.getenv("LOG_LEVEL"),
     'file': os.getenv("LOG_FILE"),
     'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    'date_format': '%d-%m-%Y %H:%M' #'%Y-%m-%d %H:%M:%S'
+    'date_format': '%d-%m-%Y_%H-%M' #'%Y-%m-%d %H:%M:%S'
 }
 
 # Verificar variables críticas
@@ -101,55 +101,25 @@ def validate_config():
 # Configuración de consultas (mantener igual)
 QUERIES_CONFIG = {
     'ingresos_gaia': {
-        'sql_file': 'data/ingresos-gaia.sql',
-        'transformation': 'ingresos_gaia_transform',
-        'output_file': 'reports/Ingresos-GAIA.xlsx',
+        'sql_file': '../data/estados-cuenta-gaia.sql',
+        'transformation': 'estados-cuenta-gaia-pipeline',
+        'output_file': 'reports/EstadosCuenta-GAIA.xlsx',
         'subject': 'Reporte Mensual - {mes_actual}/{año_acutal}',
         'filters': {
             'mes_actual': True,
             'año_actual': True
         }
     },
-    'ingresos_condominios_bi': {
-        'sql_file': 'data/ingresos-condominios-bi.sql',
-        'transformation': 'ingresoos_condominios_bi_transform',
-        'output_file': 'reports/Ingresos-Condominios-BI.xlsx',
-        'subject': 'Ingresos Condominios - {mes_actual}/{año_acutal}',
-        'filters': {
-            'mes_actual': True,
-            'año_actual': True
-        }
-    },
-    'ingresos_condominios_bi': {
-        'sql_file': 'data/ingresos-condominios-bi.sql',
-        'transformation': 'ingresoos_condominios_bi_transform',
-        'output_file': 'reports/Ingresos-Condominios-BI.xlsx',
-        'subject': 'Ingresos Condominios - {mes_actual}/{año_acutal}',
-        'filters': {
-            'mes_actual': True,
-            'año_actual': True
-        }
-    },
-    'ingresos_condominios_bi': {
-        'sql_file': 'data/ingresos-condominios-bi.sql',
-        'transformation': 'ingresoos_condominios_bi_transform',
-        'output_file': 'reports/Ingresos-Condominios-BI.xlsx',
-        'subject': 'Ingresos Condominios - {mes_actual}/{año_acutal}',
-        'filters': {
-            'mes_actual': True,
-            'año_actual': True
-        }
-    },
-    'ingresos_condominios_bi': {
-        'sql_file': 'data/ingresos-condominios-bi.sql',
-        'transformation': 'ingresoos_condominios_bi_transform',
-        'output_file': 'reports/Ingresos-Condominios-BI.xlsx',
-        'subject': 'Ingresos Condominios - {mes_actual}/{año_acutal}',
-        'filters': {
-            'mes_actual': True,
-            'año_actual': True
-        }
-    }
+    # 'ingresos_condominios_bi': {
+    #     'sql_file': 'data/ingresos-condominios-bi.sql',
+    #     'transformation': 'ingresoos_condominios_bi_transform',
+    #     'output_file': 'reports/Ingresos-Condominios-BI.xlsx',
+    #     'subject': 'Ingresos Condominios - {mes_actual}/{año_acutal}',
+    #     'filters': {
+    #         'mes_actual': True,
+    #         'año_actual': True
+    #     }
+    # }
 }
 
 # Configuración de filtros dinámicos (mantener igual)
